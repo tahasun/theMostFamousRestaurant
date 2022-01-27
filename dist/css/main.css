@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #e5e4e2;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index: -1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10vh;
+}
+
+.logo_img {
+  height: 4rem;
+}
+
+.logo_title {
+  margin: 0.5rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.main {
+  margin: 10vh 17.5vw 18vh 17.5vw;
+}
+
+.book_btn {
+  background-color: #ffc40c;
+  padding: 0.2rem 0.5rem;
+  height: 100%;
+  text-align: center;
+  line-height: 3rem;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.book_btn:hover {
+  background-color: #262626;
+  color: #fff;
+}
+
+.book-mobile_btn:hover {
+  background-color: #262626;
+  color: #fff;
+}
+
+.contact {
+  background-color: #e5e4e2;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+}
+
+.dish {
+  overflow-y: hidden;
+  width: 16vw;
+  height: 16vw;
+}
+
+.dish_img {
+  width: 100%;
+}
+
+.dish_info {
+  background-color: #e5e4e2;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.dish_info > p {
+  font-size: 0.75rem;
+}
+
+.menu-btn {
+  background-color: #262626;
+  color: #e5e4e2;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.menu-btn:hover {
+  background-color: #ffc40c;
+  color: #000;
+}
+
+footer {
+  margin-top: 20vh;
+  padding: 0.5rem 1rem;
+  background-color: #262626;
+  color: #e5e4e2;
+  font-size: 0.75rem;
+  width: 100vw;
+}
+
+.parent {
+  background-color: bisque;
+}
+
+.first {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: aquamarine;
+}
+
+.second {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: pink;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: ".  bk   con con" "d11 d12 d21 d22" "d31 d32 d41 d42" ".    .   .  exp";
+}
+
+.book {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: bk;
+}
+
+.contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: con;
+}
+
+.menu-btn {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: exp;
+}
+
+#dish11 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: d11;
+}
+
+#dish12 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: d12;
+}
+
+#dish21 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: d21;
+}
+
+#dish22 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: d22;
+}
+
+#dish31 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: d31;
+}
+
+#dish32 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: d32;
+}
+
+#dish41 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: d41;
+}
+
+#dish42 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: d42;
+}
+
+.contact-mobile {
+  visibility: hidden;
+}
+
+.book-mobile {
+  visibility: hidden;
+}
+
+.hero-img-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1240px) {
+  .main {
+    margin-top: 0;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "bk  con" "d11 d12" "d22 d21" "d32 d31" "d41 d42" ".   exp";
+  }
+  .logo_title {
+    padding-top: 25vh;
+  }
+  .dish {
+    width: 100%;
+  }
+  .dish_info {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .main {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "d11 d12" "d22 d21" "d32 d31" "d41 d42" ".   exp";
+  }
+  .hero-img {
+    display: none;
+  }
+  .hero-img-mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100vw;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .logo {
+    padding-top: 20vh;
+  }
+  .logo_title {
+    padding: 2vh 4vw 1vh 4vw;
+    font-size: 1.5rem;
+  }
+  .dish {
+    width: 100%;
+  }
+  .dish_info, .dish .primary-text {
+    font-size: 0.9rem;
+  }
+  .dish_info > p {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+  .book {
+    display: none;
+  }
+  .contact-mobile {
+    visibility: visible;
+    text-align: center;
+  }
+  .book-mobile {
+    visibility: visible;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 17.5vw;
+  }
+  .book-mobile_btn {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    background-color: #ffc40c;
+    color: #262626;
+    text-transform: uppercase;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .logo {
+    padding-top: 5vh;
+  }
+  .logo_title {
+    padding: 1vh 4vw;
+  }
+  .dish_info {
+    padding: 1rem 0.5rem;
+  }
+  .dish_info, .dish .primary-text {
+    font-size: small;
+  }
+  .book-mobile_btn {
+    font-size: small;
+    font-weight: 500;
+  }
+  .menu-btn {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .dish_info, .dish .primary-text {
+    font-size: x-small;
+  }
+  .book-mobile_btn {
+    font-size: x-small;
+    padding-left: 0.25rem;
+  }
+  .menu-btn {
+    font-size: x-small;
+  }
+  .contact-mobile {
+    position: absolute;
+    top: 9%;
+    text-align: left;
+    left: 70%;
+    width: 20vh;
+    font-size: x-small;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  footer {
+    margin-top: 5vh;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.primary-text {
+  color: #262626;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.secondary-text {
+  color: #ffc40c;
+}
+
+.accent-text {
+  color: #6A8000;
+}
+/*# sourceMappingURL=main.css.map */

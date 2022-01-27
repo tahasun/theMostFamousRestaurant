@@ -1,0 +1,175 @@
+.contact-mobile {
+    visibility: hidden;
+}
+
+.book-mobile {
+    visibility: hidden;
+}
+
+.hero-img-mobile {
+    display: none;
+}
+
+@include media-lg {
+    .main {
+        margin-top: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "bk  con"
+        "d11 d12"
+        "d22 d21"
+        "d32 d31"
+        "d41 d42"
+        ".   exp";
+    }
+
+    .logo_title {
+        padding-top: 25vh;
+    }
+
+
+    .dish {
+        width: 100%;
+        &_info {
+            padding: 2rem 1rem;
+        }
+    }
+
+}
+
+@include media-md {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "d11 d12"
+        "d22 d21"
+        "d32 d31"
+        "d41 d42"
+        ".   exp";
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-img-mobile {
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .logo {
+        padding-top: 20vh;
+
+        &_title {
+            padding: 2vh 4vw 1vh 4vw;
+            font-size: 1.5rem;
+        }
+    }
+
+    .dish {
+        width: 100%;
+        &_info, .primary-text {
+            font-size: 0.9rem;
+        }
+
+        &_info > p {
+            display: none;
+        }
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .book {
+        display: none;
+    }
+
+    .contact-mobile {
+        visibility: visible;
+        text-align: center;
+    }
+    
+    .book-mobile {
+        visibility: visible;
+        position: sticky;
+        top: 0;
+        width: 17.5vw;
+        
+        &_btn {
+            font-size: 1rem;
+            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            background-color: $secondary-color;
+            color: $primary-color;
+            text-transform: uppercase;
+            @include transition-ease;
+        }
+    }
+}
+
+@include media-sm {
+    .logo {
+        padding-top: 5vh;
+        &_title {
+            padding: 1vh 4vw;
+        }
+    }
+
+    .dish {
+        &_info {
+            padding: 1rem 0.5rem;
+        }
+        &_info, .primary-text {
+            font-size: small;
+        }
+    }
+
+    .book-mobile_btn {
+        font-size: small;
+        font-weight: 500;
+    }
+
+    .menu-btn {
+        font-size: small;
+    }
+}
+
+@include media-xs {
+    .dish {
+        &_info, .primary-text {
+            font-size: x-small;
+        }
+    }
+
+    .book-mobile_btn {
+        font-size: x-small;
+        padding-left: 0.25rem;
+    }
+
+    .menu-btn {
+        font-size: x-small;
+    }
+
+    .contact-mobile {
+        position: absolute;
+        top: 9%;
+        text-align: left;
+        left: 70%;
+        width: 20vh;
+        font-size: x-small;
+        transform: rotate(90deg);
+    }
+
+    footer {
+        margin-top: 5vh;
+        position: absolute;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,54 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    ".  bk   con con"
+    "d11 d12 d21 d22"
+    "d31 d32 d41 d42"
+    ".    .   .  exp";
+}
+
+.book {
+    grid-area: bk;
+}
+
+.contact {
+    grid-area: con;
+}
+
+.menu-btn {
+    grid-area: exp;
+}
+
+
+#dish11 {
+    grid-area: d11;
+}
+
+#dish12 {
+    grid-area: d12;
+}
+
+#dish21 {
+    grid-area: d21;
+}
+
+#dish22 {
+    grid-area: d22;
+}
+
+#dish31 {
+    grid-area: d31;
+}
+
+#dish32 {
+    grid-area: d32;
+}
+
+#dish41 {
+    grid-area: d41;
+}
+
+#dish42 {
+    grid-area: d42;
+}
